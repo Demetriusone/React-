@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, {useState} from 'react'
+import Counter from "./components/Counter";
+import ClassCounter from "./components/ClassCounter";
 function App() {
+    const [likes, setlikes] = useState(5);
+    const [value, setValue] = useState('input text')
+    console.log(likes);
+    console.log(setlikes);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Counter/>
+        <ClassCounter/>
     </div>
   );
 }
-
 export default App;
